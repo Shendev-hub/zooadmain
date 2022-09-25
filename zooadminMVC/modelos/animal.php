@@ -47,7 +47,7 @@
     public static function ActualizarProducto($id,$nom,$sex,$edad,$especie,$hm){
         $conexionBaseDatos=BaseDatos::crearInstancia();
         $sql=$conexionBaseDatos -> prepare ("UPDATE animales SET nombre=?, sexo=?, edad=?, id_especie=?, historial_med=?  WHERE id=?");
-        $sql->execute (array($id,$nom,$sex,$edad,$especie, $hm));
+        $sql->execute (array($id,$nom,$sex,$edad,$especie,$hm));
 
     }
 

@@ -3,7 +3,7 @@
     include_once("modelos/animal.php");
 
 
-    class ControladorProductos {
+    class Controladoranimales {
 
         public function mostrar(){
             $datosProductos=Producto::consultaranimales();
@@ -36,26 +36,26 @@
         }
 
 
-        public function controladorCrearProducto() {
+        public function controladorCrearanimal() {
             if ($_POST){
-                $pro=$_POST["txtcodigo"];
-                $nom=$_POST["txtnombre"];
-                $pres=$_POST["txtpresentacion"];
-                $prec=$_POST["txtprecio"];
-                $tipo=$_POST["txttipo"];
-                Producto::CrearProducto($pro,$nom,$pres,$prec,$tipo);
-                header("Location: index.php?controlador=productos&accion=mostrar");
+                $pro=$_POST["txtnombre"];
+                $nom=$_POST["txtsexo"];
+                $pres=$_POST["txtedad"];
+                $prec=$_POST["txtespecie"];
+                $tipo=$_POST["txthistorial"];
+                Producto::CrearProducto($nom,$sex,$edad,$especie,$hm);
+                header("Location: index.php?controlador=animales&accion=mostrar");
             }
            
             
         }
 
         public function borrarRegistro() {
-            if ($_GET['id']){
-                $idProducto=$_GET['id'];
-                Producto::BorrarProducto($idProducto);
+            if ($_GET['id_animal']){
+                $idanimal=$_GET['id_animal'];
+                Producto::BorrarProducto($idanimal);
                 echo '<script>';
-                echo "window.location.href='index.php?controlador=productos&accion=mostrar' ";
+                echo "window.location.href='index.php?controlador=animales&accion=mostrar' ";
                 echo '</script>';
             }
         }

@@ -1,5 +1,5 @@
 <?php
-    include_once("./modelos/producto.php");
+    include_once("./modelos/animal.php");
 ?>
 
 <div class="container">
@@ -14,34 +14,28 @@
                     <div class="container col-sm-6">
                         <form method="POST" action="">
                             <div class = "form-group">
-                                <label for="inputid"> <strong> Id de producto </strong></label>
-                                <input type="text" value="<?php echo $DatosProducto->idProducto; ?>" name="txtid" class="form-control" id="inputid" disabled>
-                            </div>
-                            
-                        
-                            <div class = "form-group">
-                                <label for="inputcodigo"> <strong> Código de producto </strong></label>
-                                <input type="text" value="<?php echo $DatosProducto->codProducto; ?>" name="txtcodigo" class="form-control" id="inputcodigo" >
+                                <label for="inputid_animal"> <strong> Id de mascota </strong></label>
+                                <input type="text" value="<?php echo $Datosanimal->idanimal; ?>" name="txtid_animal" class="form-control" id="inputid_animal" disabled>
                             </div>
 
                             <div class = "form-group">
-                                <label for="inputnombre"> <strong> Nombre del producto </strong></label>
-                                <input type="text" value="<?php echo $DatosProducto->nombreProducto; ?>" name="txtnombre" class="form-control" id="inputnombre" >
+                                <label for="inputnombre"> <strong> Nombre del animal </strong></label>
+                                <input type="text" value="<?php echo $Datosanimal->nombreanimal; ?>" name="txtnombre" class="form-control" id="inputnombre" >
                             </div>
 
                             <div class = "form-group">
-                                <label for="inputpresentacion"> <strong> Presentación </strong></label>
-                                <input type="text" value="<?php echo $DatosProducto->presentacionProducto; ?>"  name="txtpresentacion" class="form-control" id="inputpresentacion" >
+                                <label for="inputpresentacion"> <strong> Sexo del animal </strong></label>
+                                <input type="text" value="<?php echo $Datosanimal->sexoanimal; ?>"  name="txtsexo" class="form-control" id="inputsexo" >
                             </div>
 
                             <div class = "form-group">
-                                <label for="inputprecio"> <strong> Precio del producto </strong></label>
-                                <input type="text" value="<?php echo $DatosProducto->precioProducto; ?>" name="txtprecio" class="form-control" id="inputprecio" >
+                                <label for="inputedad"> <strong> edad del animal </strong></label>
+                                <input type="text" value="<?php echo $Datosanimal->edadanimal; ?>" name="txtedad" class="form-control" id="inputedad" >
                             </div>
 
                             <div class = "form-group">
-                                <label for="inputtipo"> <strong> Tipo del producto </strong></label>
-                                <input type="text" value="<?php echo $DatosProducto->tipoProducto; ?>" name="txttipo" class="form-control" id="inputtipo" >
+                                <label for="inputid_especie"> <strong> Tipo del producto </strong></label>
+                                <input type="text" value="<?php echo $Datosanimal->tipoProducto; ?>" name="txttipo" class="form-control" id="inputtipo" >
                             </div>
                             <br>
                             <button type="submit" class="btn btn-primary"> Actualizar producto  </button>
