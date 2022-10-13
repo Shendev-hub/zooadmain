@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-09-2022 a las 23:32:32
+-- Tiempo de generación: 14-10-2022 a las 01:36:15
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.0.13
 
@@ -32,7 +32,8 @@ CREATE TABLE `animales` (
   `nombre` varchar(50) NOT NULL,
   `sexo` varchar(50) NOT NULL,
   `edad` varchar(50) NOT NULL,
-  `id_especie` int(11) NOT NULL
+  `id_especie` int(11) NOT NULL,
+  `historial_med` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -46,6 +47,16 @@ CREATE TABLE `especie` (
   `nombre` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `especie`
+--
+
+INSERT INTO `especie` (`id_especie`, `nombre`) VALUES
+(1, 'canino'),
+(2, 'felino'),
+(3, 'aves'),
+(4, 'reptil');
+
 -- --------------------------------------------------------
 
 --
@@ -57,9 +68,16 @@ CREATE TABLE `usuarios` (
   `perfil` varchar(50) NOT NULL,
   `nombre` varchar(50) NOT NULL,
   `correo` varchar(50) NOT NULL,
-  `clave` varchar(50) NOT NULL,
-  `id_animal` int(11) NOT NULL
+  `clave` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `perfil`, `nombre`, `correo`, `clave`) VALUES
+(4, 'usuario', '', '', ''),
+(5, 'usuario', '', '', '');
 
 --
 -- Índices para tablas volcadas
@@ -82,8 +100,7 @@ ALTER TABLE `especie`
 -- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id_animal` (`id_animal`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -99,13 +116,13 @@ ALTER TABLE `animales`
 -- AUTO_INCREMENT de la tabla `especie`
 --
 ALTER TABLE `especie`
-  MODIFY `id_especie` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_especie` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Restricciones para tablas volcadas
@@ -116,12 +133,6 @@ ALTER TABLE `usuarios`
 --
 ALTER TABLE `animales`
   ADD CONSTRAINT `animales_ibfk_1` FOREIGN KEY (`id_especie`) REFERENCES `especie` (`id_especie`);
-
---
--- Filtros para la tabla `usuarios`
---
-ALTER TABLE `usuarios`
-  ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`id_animal`) REFERENCES `animales` (`id_animal`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

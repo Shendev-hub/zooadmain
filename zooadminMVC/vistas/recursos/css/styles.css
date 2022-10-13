@@ -90,7 +90,7 @@ header a:hover{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("..\images\932920-perro-corriendo-animales-748x499.jpg");
+    ,url("../images/perro1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -144,7 +144,7 @@ header a:hover{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("../images/Animales-de-compañía-y-los-adultos-mayores-perro.jpg");
+    ,url("../images/senior1.jpg");
 
 }
 
@@ -154,7 +154,7 @@ header a:hover{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("media/full-stack.jpg");
+    ,url("../images/full.jpg");
 }
 
 .carta:nth-child(3){
@@ -163,7 +163,7 @@ header a:hover{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("../media/nosql.jpg");
+    ,url("../images/nosql.jpg");
 
 }
 
@@ -254,7 +254,7 @@ footer .container{
     }
 
     #somos-ZOOadmin .img-container{
-        background-image: url("../images/Copia\ de\ Veterinary.jpg");
+        background-image: url("../images/logo.jpg");
         background-size: cover;
         background-position: center center;
         height: 500px;
@@ -294,7 +294,7 @@ footer .container{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
-        ,url("../media/Animales-de-compañía-y-los-adultos-mayores-perro.jpg");
+        ,url("../images/senior1.jpg");
 
     }
 
@@ -304,7 +304,7 @@ footer .container{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
-        ,url("../media/veterinarios-y-Covid-19-dstNtc.jpg");
+        ,url("../images/perro2.jpg");
     }
 
     .carta:nth-child(3){
@@ -313,12 +313,12 @@ footer .container{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
-        ,url("..../media/nosql.jpg");
+        ,url("/vistas/recursos/images/nosql.jpg");
 
     }
 
     #caracteristicas{
-        background-image: url("../images/ de\ Veterinary\ \(1\).jpg");
+        background-image: url("/vistas/recursos/images/logo.jpg");
         background-repeat: no-repeat;
         background-size: 500px 400px;
         background-position: calc(100vw - 500px) 120px;
@@ -350,4 +350,13 @@ footer .container{
     #caracteristicas{
         background-position-x: calc(100vw - 800px);
     }
+}
+
+.wrap-form {
+    margin-top: 2em;
+    
+}
+.btn-style {
+    margin-bottom: 2em;
+    
 }
